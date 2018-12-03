@@ -1,0 +1,21 @@
+version: '2.1'
+
+services:
+
+  client:
+    image: "erl_pubsub:1.0"
+    container_name: "erl_pubsub"
+    ports:
+    - "8001:8001"
+    depends_on:
+    - emqttd
+
+  emqttd:
+    image: "emqttd-docker-v2.3.11:latest"
+    container_name: "emqttd-docker-v2.3.11"
+    ports:
+    - "1883:1883"
+    - "8083:8083"
+    - "8883:8883"
+    - "8084:8084"
+    - "18083:18083"
