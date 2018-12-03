@@ -1,0 +1,3 @@
+[submodule "erl_rest_chat_submodule"]
+	path = erl_rest_chat_submodule
+	url = https://github.com/pratimachainani/erl_rest_chat
